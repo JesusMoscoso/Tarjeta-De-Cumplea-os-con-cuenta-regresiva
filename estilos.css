@@ -1,0 +1,32 @@
+
+.card {
+    border-radius: 12px;
+    background-image: url('imagenes/imagen.jpg');
+    background-size: cover;
+  
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+}
+.btn {
+    margin-top: 10px;
+    width: 100%;
+}
+   
+.input-field input::placeholder {
+    color: black;
+    opacity: 1;   
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.row {
+    margin-top: 5%;
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    background-color:rgb(207, 241, 241);
+}
+

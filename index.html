@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Materialize</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  </style>
+</head>
+<body> 
+
+  <div class="container">
+    <!-- Formulario -->
+    <div class="row">
+      
+      <div class="col s12 m8 l6 offset-m2 offset-l3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title black-text">Cuenta Regresiva Cumpleaños</span>
+            <form>
+
+              <!-- nombre -->
+              <div class="input-field">
+                <input id="txtNombre" type="text" placeholder="Ingresa tu nombre" required>
+                <label for="txtNombre">Nombre</label>
+              </div>
+
+              <!-- fecha de cumpleaños -->
+              <div class="input-field">
+                <input id="txtFecha" type="text" class="datepicker" placeholder="Selecciona tu fecha" required>
+                <label for="txtFecha">Fecha de Cumpleaños</label>
+              </div>
+
+              <!-- botones -->
+              <button class="btn waves-effect waves-light teal" type="submit" id="btnEnviar">
+                Enviar
+              </button>
+              <button class="btn waves-effect waves-light teal lighten-2" type="button" id="btnReiniciar"> 
+                Reiniciar
+              </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="row">
+      <div class="col s12 m8 l6 offset-m2 offset-l3">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title black-text">Cuenta Regresiva</span>
+            <p id="resultado" class="black-text center-align flow-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.datepicker');
+      var instances = M.Datepicker.init(elems, {
+        format: 'yyyy-mm-dd',
+        autoClose: true
+      });
+    });
+  </script>
+</body>
+</html>
